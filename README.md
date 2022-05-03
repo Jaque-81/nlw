@@ -1,3 +1,3 @@
-Projeto NLW - ROCKETSEAT
+# Projeto NLW - ROCKETSEAT 🚀🚀🚀
 
-Criando um site com JavaScript, HTML e CSS.
+### Criando um site com JavaScript, HTML e CSS.

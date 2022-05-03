@@ -1,6 +1,7 @@
 *{
   margin: 0;/*retirando o espaço entre as caixas*/
   box-sizing: border-box;/*contar o tamanho da caixa a partir da borda da caixa*/
+  /*font-family: 'DM Sans';*/
 }
 
 :root {/*criando um seletor*/
@@ -8,6 +9,8 @@
   --primary-color:hsl(170, 100%, 26%);/*numero para cor, numero para saturação e numero para luz (a no hsl é opaccidade que vai de 0 a 1*/
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: hsl(148, 28%, 89%);
 
   font-size: 62.5%; /*1rem = 10px*/
   
@@ -16,7 +19,6 @@
 body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
-  
   text-align: center;
 }
 
@@ -76,6 +78,57 @@ button{
   margin-left: auto;
 }
 
-img {
+.stats{/*pegando um seletor de classe */
+  width: 32.7rem;
+  padding-block: 4rem;/*eixo y, vertical*/
+  margin-inline: auto;/*eixo x > margem referente ao left e ao hight*/
+  background: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 06rem;
+
+  display: flex;
+  flex-direction: column;/*especificando que o display vai apresentr como coluna os elementos*/
+  justify-content: center;
+  gap: 6rem; /*separação entre os elementos*/
+
+
+
   
+} 
+
+.stat h3{
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+.stat p{
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+header img{
+  
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;/*mexe na posição da imagem para que ela ique colada na div*/
+
+}
+
+header::before{/*construindo uma tag html no css (pseudo selector > antes do conteúdo do header*/
+  content: "";/*toda tag é uma caixa e toda caixa tem um contúdo. Essa caixa tem conteúdo vazio*/
+  width: 100vw;/*100 view port -- preeche o fundo*/
+  height: 108rem;
+  background-color: var(--brand-light);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;/*eixo z é usado para 3 dimensões*/
 }

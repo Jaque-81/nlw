@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /*caixa será medida a partir da borda*/
 }
 
 :root {
@@ -12,8 +12,9 @@
 
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
+   --bg-light: hsl(100, 14%, 97%)
 
-  font-size: 62.5%; /* 1rem = 10px - 625/10 */
+  font-size: 62.5%; /* 1rem = 10px */
 
   --nav-height: 7.2rem;
 }
@@ -31,6 +32,8 @@ body {
   text-align: center;
 
   overflow: overlay;
+
+  background: var(--brand-light);
 }
 
 .wrapper {
@@ -43,6 +46,10 @@ ul {
   list-style: none;
 }
 
+section {
+  padding-block: 10rem;
+
+}
 /*=== HEADER =================================*/
 header {
   margin-top: calc(4.1rem + var(--nav-height));
@@ -182,16 +189,16 @@ nav.scroll button path {
 nav button {
   background: none;
   border: none;
-  cursor: pointer;/* o cursos vira um mãozinha*/ 
+  cursor: pointer;
 }
 
 /*=== MENU-EXPANDED =================================*/
 body.menu-expanded {
-  overflow: hidden;/*quando o menu estiver expandido, retirar da tela o que excede que é o scroll*/
+  overflow: hidden;
 }
 
-body.menu-expanded > :not(nav) { /* > * isso significa que estamos pegando todos os filhos do primeiro nível --- sudo class not especifica quem não vai aplicar exceto o nav  */
-  display: none;/*vai desaparecer com tudo do primeiro nível*/
+body.menu-expanded > :not(nav) {
+  display: none;
 }
 
 .menu,
@@ -259,7 +266,7 @@ body.menu-expanded nav {
 }
 
 .social-links {
-  display: flex;/*elementos um ao lado do outro*/
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 3.2rem;
@@ -277,4 +284,45 @@ body.menu-expanded .logo path {
 
 body.menu-expanded button path {
   stroke: white;
+}
+
+/*================SERVICES================*/
+
+#services header h4 {
+  /*se estou referenciando um id do meu html eu coloco o # e o nome */
+
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08em;
+
+  color: var(--primary-color);
+
+  text-transform: uppercase;
+}
+
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+
+  color: var(--headline);
+
+  margin-bottom: 6rem;
+}
+
+#services .card {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+ #services .card {
+  padding: 2.4rem;
+  text-align: left;
+  background: white;
+  border: 1px solid var(--brand-light);
+  border-radius: .6rem;
+}
+
+#services .card h3 {
+  margin-block: 1.6rem;
 }

@@ -14,7 +14,7 @@ function openMenu() {
 function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
-=======
+
 function onScroll(){
   if(scrollY > 0){
       navigation.classList.add('scroll')//navigation é um objeto/ lista de classes que é um objeto por isso usa .

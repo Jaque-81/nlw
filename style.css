@@ -13,7 +13,7 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
 
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; /* 1rem = 10px - 625/10 */
 
   --nav-height: 7.2rem;
 }
@@ -182,16 +182,16 @@ nav.scroll button path {
 nav button {
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: pointer;/* o cursos vira um mãozinha*/ 
 }
 
 /*=== MENU-EXPANDED =================================*/
 body.menu-expanded {
-  overflow: hidden;
+  overflow: hidden;/*quando o menu estiver expandido, retirar da tela o que excede que é o scroll*/
 }
 
-body.menu-expanded > :not(nav) {
-  display: none;
+body.menu-expanded > :not(nav) { /* > * isso significa que estamos pegando todos os filhos do primeiro nível --- sudo class not especifica quem não vai aplicar exceto o nav  */
+  display: none;/*vai desaparecer com tudo do primeiro nível*/
 }
 
 .menu,
@@ -259,7 +259,7 @@ body.menu-expanded nav {
 }
 
 .social-links {
-  display: flex;
+  display: flex;/*elementos um ao lado do outro*/
   align-items: center;
   justify-content: center;
   gap: 3.2rem;

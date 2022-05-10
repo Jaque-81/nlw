@@ -15,6 +15,7 @@ function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
 
+<<<<<<< HEAD
 ScrollReveal({
   origin: 'top', //scroll do home desce
   diatance: '30px',
@@ -26,3 +27,13 @@ ScrollReveal({
   #services,
   #services header,
   #services .card`) //` permite a string com quebra de linha
+=======
+function onScroll(){
+  if(scrollY > 0){
+      navigation.classList.add('scroll')//navigation é um objeto/ lista de classes que é um objeto por isso usa .
+  } else{
+    navigation.classList.remove('scroll')
+  }
+}
+
+>>>>>>> 2c3e233355c734e0e0b24f80512902fdd4ca60ad
